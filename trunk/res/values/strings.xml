@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">RickDemo</string>
+    
+    <string name="hello">Hello World!</string>
+    
+    <string name="cate_calc">計算</string>
+    
+    
+    <string name="btn_dialog">DialogExample</string>
+    
+    <string name="dialog_demo">Dialog Demo</string>
+    <string name="btn_show_dialog">Show Dialog</string>
+    
+    <string name="tabmenu_demo">TabMenu Demo</string>
+    <string name="btn_show_tabmenu">Show TabMenu</string>
+
+</resources>
