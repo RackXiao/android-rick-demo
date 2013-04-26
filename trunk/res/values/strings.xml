@@ -8,6 +8,22 @@
     <string name="cate_calc">計算</string>
     
     
+    <string name="calc_cdp">CDP</string>
+    <string name="calc_cdp_open">OPEN</string>
+    <string name="calc_cdp_high">HIGH</string>
+    <string name="calc_cdp_low">LOW</string>
+    <string name="calc_cdp_close">CLOSE</string>
+    <string name="btn_calc_cdp">計算</string>
+    <string name="ret_h3">壓力3</string>
+    <string name="ret_h2">壓力2</string>
+    <string name="ret_h1">壓力1</string>
+    <string name="ret_bop">BOP</string>
+    <string name="ret_l1">支撐1</string>
+    <string name="ret_l2">支撐2</string>
+    <string name="ret_l3">支撐3</string>
+    
+    
+    
     <string name="btn_dialog">DialogExample</string>
     
     <string name="dialog_demo">Dialog Demo</string>
