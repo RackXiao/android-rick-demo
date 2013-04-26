@@ -1,5 +1,6 @@
 package tw.rackx.app;
 
+import tw.rackx.app.calc.CalcActivity;
 import tw.rackx.util.L;
 import tw.rackx.util.LayoutManager;
 import tw.rackx.util.UtilBase;
@@ -36,7 +37,7 @@ public class AHome extends Activity {
 		btn.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Intent intent = new Intent(AHome.this, Dialog.class);
+				Intent intent = new Intent(AHome.this, CalcActivity.class);
 	    		startActivity(intent);
 			}
 		});

@@ -21,18 +21,24 @@ public class LayoutManager {
 	public static int WelcomeBackground = ++BaseId;
 	public static int WelcomeFBButton = ++BaseId;
 	
-	private static RelativeLayout setBaseLayoutScreenResolution(RelativeLayout rLayout){
+	public static RelativeLayout setBaseLayoutScreenResolution(RelativeLayout rLayout){
 		RelativeLayout.LayoutParams rParams = new RelativeLayout.LayoutParams((int)(GV.targetResolution.x * GV.scale), (int)(GV.targetResolution.y * GV.scale));
 		rParams.setMargins((int)(((float)GV.resolution.x - (GV.targetResolution.x * GV.scale)) / 2.0f), (int)(((float)GV.resolution.y - (GV.targetResolution.y * GV.scale)) / 2.0f), 0, 0);
 		rLayout.setLayoutParams(rParams);
 		return rLayout;
 	}
 	
+	/**
+	 * 初始選單
+	 * @param context
+	 * @return
+	 */
 	public static View getMainLayout(Context context) {
 		RelativeLayout baseLayout = new RelativeLayout(context);
 		RelativeLayout.LayoutParams rParams = null;
 		Button btn = null;
 
+		// 計算功能
 		rParams = new RelativeLayout.LayoutParams((int)(160 * GV.scale), (int)(160 * GV.scale));
 		btn = new Button(context);
 		btn.setId(BtnCalc);
@@ -55,8 +61,6 @@ public class LayoutManager {
 		
 		return setBaseLayoutScreenResolution(baseLayout);
 	}
-	
-	
 	
 	/**
 	 * WelcomeLayout的Layout UI
