@@ -3,10 +3,9 @@
 
     <string name="app_name">RickDemo</string>
     
-    <string name="hello">Hello World!</string>
     
+    <!-- future: 容易變更的地方再抽出 -->
     <string name="cate_calc">計算</string>
-    
     
     <string name="calc_cdp">CDP</string>
     <string name="calc_cdp_open">OPEN</string>

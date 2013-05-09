@@ -1,8 +1,10 @@
 package tw.rackx.app.calc;
 
 import tw.rackx.R;
+import tw.rackx.app.GV;
+import tw.rackx.extend.ExtendActivity;
 import tw.rackx.layout.LayoutCalc;
-import android.app.Activity;
+import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -10,7 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class CalcCDPActivity extends Activity {
+public class CalcCDPActivity extends ExtendActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -18,9 +20,24 @@ public class CalcCDPActivity extends Activity {
 
 		setContentView(LayoutCalc.getCalcCDPLayout(this));
 		
+		initEditText();
 		initBtnEvent();
+		calc();
 	}
 	
+	private void initEditText() {
+		EditText et = null;
+		// 設值
+		et = (EditText) findViewById(LayoutCalc.ETOPEN);
+		et.setText(String.valueOf(GV.SP.getInt("CDP_o", 0)));
+		et = (EditText) findViewById(LayoutCalc.ETHIGH);
+		et.setText(String.valueOf(GV.SP.getInt("CDP_h", 0)));
+		et = (EditText) findViewById(LayoutCalc.ETLOW);
+		et.setText(String.valueOf(GV.SP.getInt("CDP_l", 0)));
+		et = (EditText) findViewById(LayoutCalc.ETCLOSE);
+		et.setText(String.valueOf(GV.SP.getInt("CDP_c", 0)));
+	}
+
 	private void initBtnEvent() {
 		Button btn;
 		btn = (Button) findViewById(LayoutCalc.ETBtnCalcCDP);
@@ -54,6 +71,13 @@ public class CalcCDPActivity extends Activity {
 		if(!"".equals(et.getText().toString()))
 			c = Integer.valueOf(et.getText().toString());
 
+		Editor ed =  GV.SP.edit();
+		ed.putInt("CDP_o", o);
+		ed.putInt("CDP_h", h);
+		ed.putInt("CDP_l", l);
+		ed.putInt("CDP_c", c);
+		ed.commit();
+		
 		if(0!=h&&0!=l&&0!=c){
 			float hbop3 = 0;
 			float hbop2 = 0;

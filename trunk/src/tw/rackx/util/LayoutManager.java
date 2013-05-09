@@ -1,6 +1,5 @@
 package tw.rackx.util;
 
-
 import tw.rackx.R;
 import tw.rackx.app.GV;
 import android.content.Context;
@@ -11,7 +10,7 @@ import android.widget.RelativeLayout;
 
 public class LayoutManager {
 	
-	public static int BaseId = 1000;
+	private static int BaseId = 1000;
 	
 	// getMainLayout
 	public static int BtnCalc = ++BaseId;

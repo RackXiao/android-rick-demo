@@ -1,13 +1,12 @@
 package tw.rackx.app;
 
 import tw.rackx.R;
-import tw.rackx.util.L;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.view.View.OnClickListener;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.Button;
 
@@ -21,8 +20,6 @@ public class Dialog extends Activity {
 		super.onCreate(savedInstanceState);
 
 		setView();
-
-		L.d(TAG, "onCreate");
 	}
 
 	private void setView() {

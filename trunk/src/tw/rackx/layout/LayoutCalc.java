@@ -17,24 +17,24 @@ import android.widget.TextView;
 
 public class LayoutCalc {
 
-	private static int ID = 10000;
+	private static int BaseId = 10000;
 	
 	// getCalcMenuLayout
-	public static int BtnCalcCDP = ++LayoutManager.BaseId;
+	public static int BtnCalcCDP = ++BaseId;
 
 	// getCalcCDPLayout
-	public static int ETOPEN = ++LayoutManager.BaseId;
-	public static int ETHIGH = ++LayoutManager.BaseId;
-	public static int ETLOW = ++LayoutManager.BaseId;
-	public static int ETCLOSE = ++LayoutManager.BaseId;
-	public static int ETBtnCalcCDP = ++LayoutManager.BaseId;
-	public static int ETTVH3 = ++LayoutManager.BaseId;
-	public static int ETTVH2 = ++LayoutManager.BaseId;
-	public static int ETTVH1 = ++LayoutManager.BaseId;
-	public static int ETTVBOP = ++LayoutManager.BaseId;
-	public static int ETTVL1 = ++LayoutManager.BaseId;
-	public static int ETTVL2 = ++LayoutManager.BaseId;
-	public static int ETTVL3 = ++LayoutManager.BaseId;
+	public static int ETOPEN = ++BaseId;
+	public static int ETHIGH = ++BaseId;
+	public static int ETLOW = ++BaseId;
+	public static int ETCLOSE = ++BaseId;
+	public static int ETBtnCalcCDP = ++BaseId;
+	public static int ETTVH3 = ++BaseId;
+	public static int ETTVH2 = ++BaseId;
+	public static int ETTVH1 = ++BaseId;
+	public static int ETTVBOP = ++BaseId;
+	public static int ETTVL1 = ++BaseId;
+	public static int ETTVL2 = ++BaseId;
+	public static int ETTVL3 = ++BaseId;
 	
 	/**
 	 * 計算功能選單
@@ -52,15 +52,15 @@ public class LayoutCalc {
 		btn.setText(R.string.calc_cdp);
 		baseLayout.addView(btn, rParams);
 
-//		rParams = new RelativeLayout.LayoutParams((int)(160 * GV.scale), (int)(160 * GV.scale));
-//		rParams.setMargins((int)(160 * GV.scale), 0, 0, 0);
+//		rParams = new RelativeLayout.LayoutParams((int)(160 * GlobalValue.scale), (int)(160 * GlobalValue.scale));
+//		rParams.setMargins((int)(160 * GlobalValue.scale), 0, 0, 0);
 //		btn = new Button(context);
 //		btn.setId(BtnDialog);
 //		btn.setText(R.string.btn_dialog);
 //		baseLayout.addView(btn, rParams);
 //
-//		rParams = new RelativeLayout.LayoutParams((int)(160 * GV.scale), (int)(160 * GV.scale));
-//		rParams.setMargins((int)(320 * GV.scale), 0, 0, 0);
+//		rParams = new RelativeLayout.LayoutParams((int)(160 * GlobalValue.scale), (int)(160 * GlobalValue.scale));
+//		rParams.setMargins((int)(320 * GlobalValue.scale), 0, 0, 0);
 //		btn = new Button(context);
 //		btn.setId(BtnTabMenu);
 //		btn.setText(R.string.btn_show_tabmenu);
@@ -91,7 +91,7 @@ public class LayoutCalc {
 			rParams = new RelativeLayout.LayoutParams((int)(240 * GV.scale), (int)(60 * GV.scale));
 			rParams.setMargins(0, (int)(i * 60 * GV.scale), 0, 0);
 			tv = new TextView(context);
-			tv.setId(++ID);
+			tv.setId(++BaseId);
 			tv.setTextSize(16 * GV.fontScale);
 			tv.setGravity(Gravity.CENTER);
 			tv.setTextColor(Color.rgb(53, 214, 214));
@@ -100,8 +100,8 @@ public class LayoutCalc {
 			
 			// 輸入框
 			rParams = new RelativeLayout.LayoutParams((int)(240 * GV.scale), (int)(60 * GV.scale));
-			rParams.addRule(RelativeLayout.RIGHT_OF, ID);
-			rParams.addRule(RelativeLayout.ALIGN_TOP, ID);
+			rParams.addRule(RelativeLayout.RIGHT_OF, BaseId);
+			rParams.addRule(RelativeLayout.ALIGN_TOP, BaseId);
 			et = new EditText(context);
 			et.setId(edID[i]);
 			et.setSingleLine(true);
@@ -111,13 +111,12 @@ public class LayoutCalc {
 //			et.setHint("");
 			et.setInputType(InputType.TYPE_CLASS_NUMBER);
 			baseLayout.addView(et, rParams);
-
 		}
 
 		// 計算按鈕
 		rParams = new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT, (int)(60 * GV.scale));
-		rParams.addRule(RelativeLayout.BELOW, ID);
-		rParams.addRule(RelativeLayout.CENTER_HORIZONTAL, ID);
+		rParams.addRule(RelativeLayout.BELOW, BaseId);
+		rParams.addRule(RelativeLayout.CENTER_HORIZONTAL, BaseId);
 		btn = new Button(context);
 		btn.setId(ETBtnCalcCDP);
 		btn.setText(R.string.btn_calc_cdp);
