@@ -1,14 +1,14 @@
 package tw.rackx.app.calc;
 
+import tw.rackx.extend.ExtendActivity;
 import tw.rackx.layout.LayoutCalc;
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
-public class CalcActivity extends Activity {
+public class CalcActivity extends ExtendActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

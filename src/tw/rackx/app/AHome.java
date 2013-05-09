@@ -1,30 +1,25 @@
 package tw.rackx.app;
 
-import java.io.File;
+import tw.rackx.app.calc.CalcActivity;
+import tw.rackx.extend.ExtendActivity;
+import tw.rackx.util.LayoutManager;
+import tw.rackx.util.UtilBase;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 
 import com.androidquery.callback.AjaxCallback;
 import com.androidquery.callback.BitmapAjaxCallback;
 import com.androidquery.util.AQUtility;
 
-import tw.rackx.R;
-import tw.rackx.app.calc.CalcActivity;
-import tw.rackx.util.L;
-import tw.rackx.util.LayoutManager;
-import tw.rackx.util.UtilBase;
-import android.app.Activity;
-import android.content.Intent;
-import android.os.Bundle;
-import android.os.Environment;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.Window;
-import android.widget.Button;
-
-public class AHome extends Activity {
-	private static final String TAG = AHome.class.getSimpleName();
+public class AHome extends ExtendActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		
 		// set the max number of concurrent network connections, default is 4
 		AjaxCallback.setNetworkLimit(8);
 
@@ -50,14 +45,13 @@ public class AHome extends Activity {
 		
 		
 		//HIDDEN TITLE
-		requestWindowFeature(Window.FEATURE_NO_TITLE);
-		super.onCreate(savedInstanceState);
+//		getActionBar().hide();
+		getActionBar().setDisplayShowHomeEnabled(true);
+//		getActionBar().setDisplayHomeAsUpEnabled(true);
 
 		setContentView(LayoutManager.getMainLayout(this));
 
 		initBtnEvent();
-		
-		L.d(TAG, "onCreate");
 	}
 	
 	private void initBtnEvent() {

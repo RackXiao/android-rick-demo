@@ -31,6 +31,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 public class UtilBase {
+	
 	/**
 	 * 取得螢幕的解析參數
 	 * @param context
@@ -68,7 +69,6 @@ public class UtilBase {
 		}
 		return inSampleSize;
 	}
-	
 
 	/**
 	 * 將JPEG File Path縮圖用
