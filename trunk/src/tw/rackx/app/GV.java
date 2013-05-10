@@ -20,7 +20,8 @@ public class GV extends Application{
 	public static final PointF targetResolution = new PointF(480, 800);
 	public static Point resolution;
 	public static DisplayMetrics displayMetrics;
-	public static float scale;
+	public static float scaleX;
+	public static float scaleY;
 	public static float fontScale;
 	
 	private static final String SETTING_PREF = "setting_pref";
