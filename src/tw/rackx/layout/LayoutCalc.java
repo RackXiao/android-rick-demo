@@ -2,7 +2,7 @@ package tw.rackx.layout;
 
 import tw.rackx.R;
 import tw.rackx.app.GV;
-import tw.rackx.util.LayoutManager;
+import tw.rackx.extend.LayoutBase;
 import android.content.Context;
 import android.graphics.Color;
 import android.text.InputType;
@@ -15,10 +15,8 @@ import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-public class LayoutCalc {
+public class LayoutCalc extends LayoutBase{
 
-	private static int BaseId = 10000;
-	
 	// getCalcMenuLayout
 	public static int BtnCalcCDP = ++BaseId;
 
@@ -46,7 +44,7 @@ public class LayoutCalc {
 		RelativeLayout.LayoutParams rParams = null;
 		Button btn = null;
 
-		rParams = new RelativeLayout.LayoutParams((int)(160 * GV.scale), (int)(160 * GV.scale));
+		rParams = new RelativeLayout.LayoutParams((int)(160 * GV.scaleX), (int)(160 * GV.scaleX));
 		btn = new Button(context);
 		btn.setId(BtnCalcCDP);
 		btn.setText(R.string.calc_cdp);
@@ -66,7 +64,7 @@ public class LayoutCalc {
 //		btn.setText(R.string.btn_show_tabmenu);
 //		baseLayout.addView(btn, rParams);
 
-		return LayoutManager.setBaseLayoutScreenResolution(baseLayout);
+		return setBaseLayoutScreenResolution(baseLayout);
 	}
 
 	/**
@@ -88,8 +86,8 @@ public class LayoutCalc {
 		
 		for(int i=0;i<tvLabel.length;i++){
 			// 標籤
-			rParams = new RelativeLayout.LayoutParams((int)(240 * GV.scale), (int)(60 * GV.scale));
-			rParams.setMargins(0, (int)(i * 60 * GV.scale), 0, 0);
+			rParams = new RelativeLayout.LayoutParams((int)(240 * GV.scaleX), (int)(60 * GV.scaleX));
+			rParams.setMargins(0, (int)(i * 60 * GV.scaleX), 0, 0);
 			tv = new TextView(context);
 			tv.setId(++BaseId);
 			tv.setTextSize(16 * GV.fontScale);
@@ -99,7 +97,7 @@ public class LayoutCalc {
 			baseLayout.addView(tv, rParams);
 			
 			// 輸入框
-			rParams = new RelativeLayout.LayoutParams((int)(240 * GV.scale), (int)(60 * GV.scale));
+			rParams = new RelativeLayout.LayoutParams((int)(240 * GV.scaleX), (int)(60 * GV.scaleX));
 			rParams.addRule(RelativeLayout.RIGHT_OF, BaseId);
 			rParams.addRule(RelativeLayout.ALIGN_TOP, BaseId);
 			et = new EditText(context);
@@ -114,7 +112,7 @@ public class LayoutCalc {
 		}
 
 		// 計算按鈕
-		rParams = new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT, (int)(60 * GV.scale));
+		rParams = new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT, (int)(60 * GV.scaleX));
 		rParams.addRule(RelativeLayout.BELOW, BaseId);
 		rParams.addRule(RelativeLayout.CENTER_HORIZONTAL, BaseId);
 		btn = new Button(context);
@@ -133,9 +131,9 @@ public class LayoutCalc {
 
 		// 壓 BOP 撐
 		for(int i=0;i<edID.length;i++){
-			rParams = new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT, (int)(60 * GV.scale));
+			rParams = new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT, (int)(60 * GV.scaleX));
 			rParams.addRule(RelativeLayout.CENTER_HORIZONTAL);
-			rParams.setMargins(0, (int)(i * 60 * GV.scale), 0, 0);
+			rParams.setMargins(0, (int)(i * 60 * GV.scaleX), 0, 0);
 			tv = new TextView(context);
 			tv.setId(edID[i]);
 			tv.setTextSize(16 * GV.fontScale);
@@ -144,6 +142,6 @@ public class LayoutCalc {
 			rsv.addView(tv, rParams);
 		}
 		
-		return LayoutManager.setBaseLayoutScreenResolution(baseLayout);
+		return setBaseLayoutScreenResolution(baseLayout);
 	}
 }

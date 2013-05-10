@@ -44,11 +44,12 @@ public class UtilBase {
 			GV.displayMetrics = new DisplayMetrics();
 		display.getSize(GV.resolution);
 		display.getMetrics(GV.displayMetrics);
-		float scaleX = (float)(GV.resolution.x / GV.targetResolution.x);
-		//float scaleY = (float)resolution.y / 800.0f;
-		//scale = scaleX < scaleY ? scaleX : scaleY;
-		GV.scale = scaleX;
-		GV.fontScale = GV.scale * (1.5f / GV.displayMetrics.density);
+//		float scaleX = (float)(GV.resolution.x / GV.targetResolution.x);
+//		float scaleY = (float)GV.resolution.y / GV.targetResolution.y;
+//		scale = scaleX < scaleY ? scaleX : scaleY;
+		GV.scaleX = (float)(GV.resolution.x / GV.targetResolution.x);
+		GV.scaleY = (float)(GV.resolution.y / GV.targetResolution.y);
+		GV.fontScale = GV.scaleX * (1.5f / GV.displayMetrics.density);
 	}
 	
 	/**

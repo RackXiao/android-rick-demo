@@ -2,13 +2,15 @@ package tw.rackx.app;
 
 import tw.rackx.app.calc.CalcActivity;
 import tw.rackx.extend.ExtendActivity;
-import tw.rackx.util.LayoutManager;
+import tw.rackx.layout.LayoutMain;
 import tw.rackx.util.UtilBase;
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.androidquery.callback.AjaxCallback;
 import com.androidquery.callback.BitmapAjaxCallback;
@@ -16,6 +18,8 @@ import com.androidquery.util.AQUtility;
 
 public class AHome extends ExtendActivity {
 
+	private Activity activity = this;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -49,14 +53,14 @@ public class AHome extends ExtendActivity {
 		getActionBar().setDisplayShowHomeEnabled(true);
 //		getActionBar().setDisplayHomeAsUpEnabled(true);
 
-		setContentView(LayoutManager.getMainLayout(this));
+		setContentView(LayoutMain.getMainLayout(this));
 
 		initBtnEvent();
 	}
 	
 	private void initBtnEvent() {
 		Button btn;
-		btn = (Button) findViewById(LayoutManager.BtnCalc);
+		btn = (Button) findViewById(LayoutMain.BtnCalc);
 		btn.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -65,7 +69,17 @@ public class AHome extends ExtendActivity {
 			}
 		});
 		
-		btn = (Button) findViewById(LayoutManager.BtnDialog);
+		btn = (Button) findViewById(LayoutMain.BtnDiscuss);
+		btn.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+//				Toast.makeText(activity, "On going.", Toast.LENGTH_SHORT).show();
+				Intent intent = new Intent(AHome.this, DiscussActivity.class);
+	    		startActivity(intent);
+			}
+		});
+		
+		btn = (Button) findViewById(LayoutMain.BtnDialog);
 		btn.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -74,10 +88,11 @@ public class AHome extends ExtendActivity {
 			}
 		});
 		
-		btn = (Button) findViewById(LayoutManager.BtnTabMenu);
+		btn = (Button) findViewById(LayoutMain.BtnTabMenu);
 		btn.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
+				Toast.makeText(activity, "Re-write Now.", Toast.LENGTH_SHORT).show();
 //				Intent intent = new Intent(AHome.this, TabMenu.class);
 //	    		startActivity(intent);
 			}

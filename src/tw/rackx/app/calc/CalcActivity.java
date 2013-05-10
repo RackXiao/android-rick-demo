@@ -17,6 +17,10 @@ public class CalcActivity extends ExtendActivity {
 		setContentView(LayoutCalc.getCalcMenuLayout(this));
 		
 		initBtnEvent();
+		
+		// XXX temp, because no other activity
+		Intent intent = new Intent(CalcActivity.this, CalcCDPActivity.class);
+		startActivity(intent);
 	}
 	
 	private void initBtnEvent() {
