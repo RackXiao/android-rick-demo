@@ -79,6 +79,16 @@ public class AHome extends ExtendActivity {
 			}
 		});
 		
+		btn = (Button) findViewById(LayoutMain.BtnBluetoothTest);
+		btn.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+//				Toast.makeText(activity, "On going.", Toast.LENGTH_SHORT).show();
+				Intent intent = new Intent(AHome.this, BluetoothTest.class);
+	    		startActivity(intent);
+			}
+		});
+		
 		btn = (Button) findViewById(LayoutMain.BtnDialog);
 		btn.setOnClickListener(new OnClickListener() {
 			@Override
