@@ -8,7 +8,8 @@
         android:minSdkVersion="14"
         android:targetSdkVersion="17" />
     
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
 
     <application
         android:name=".app.GV"
@@ -29,6 +30,8 @@
             android:name=".app.calc.CalcCDPActivity" />
         <activity
             android:name=".app.DiscussActivity" />
+        <activity
+            android:name=".app.BluetoothTest" />
         
         
         <activity

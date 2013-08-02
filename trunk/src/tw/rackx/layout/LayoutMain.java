@@ -14,6 +14,7 @@ public class LayoutMain extends LayoutBase{
 	// getMainLayout
 	public static int BtnCalc = ++BaseId;
 	public static int BtnDiscuss = ++BaseId;
+	public static int BtnBluetoothTest = ++BaseId;
 	public static int BtnDialog = ++BaseId;
 	public static int BtnTabMenu = ++BaseId;
 	
@@ -36,6 +37,8 @@ public class LayoutMain extends LayoutBase{
 		baseLayout = addBtn(baseLayout,context,BtnCalc,context.getString(R.string.cate_calc));
 		
 		baseLayout = addBtn(baseLayout,context,BtnDiscuss,"討論區");
+		
+		baseLayout = addBtn(baseLayout,context,BtnBluetoothTest,"Bluetooth Test");
 		
 		baseLayout = addBtn(baseLayout,context,BtnDialog,context.getString(R.string.btn_dialog));
 		
