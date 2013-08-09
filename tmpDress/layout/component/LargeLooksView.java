@@ -47,7 +47,7 @@ public class LargeLooksView extends RelativeLayout {
 		rParams = new LayoutParams(PicWidth, PicHeight);
 		coverImage = new ImageView(context);
 		coverImage.setBackgroundColor(Color.argb(200, 0, 0, 0));
-		coverImage.setScaleType(ImageView.ScaleType.CENTER_CROP);
+		coverImage.setScaleType(ScaleType.CENTER_CROP);
 		coverImage.setId(1);
 		addView(coverImage, rParams);
 		

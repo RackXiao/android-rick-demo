@@ -43,8 +43,9 @@ public class UtilsDialog {
 	 */
 	public static ProgressDialog createProgressDialog(Activity activity, String dialogString){
 		ProgressDialog proDialog = new ProgressDialog(activity, android.R.style.Theme_DeviceDefault_Dialog);
-		proDialog.show();
 		proDialog.setCanceledOnTouchOutside(false);
+		proDialog.show();
+		
 		TextView tv1 = (TextView) proDialog.findViewById(android.R.id.message);
 		tv1.setText(String.format("%s...", dialogString));
 		return proDialog;

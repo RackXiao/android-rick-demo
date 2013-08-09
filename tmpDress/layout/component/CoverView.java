@@ -7,6 +7,7 @@ import android.view.Gravity;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.ImageView.ScaleType;
 
 import com.androidquery.AQuery;
 import com.otiga.dress.layout.LayoutManager;
@@ -41,7 +42,7 @@ public class CoverView extends RelativeLayout {
 		imageView = new ImageView(context);
 		imageView.setId(1);
 		imageView.setBackgroundColor(Color.argb(200, 0, 0, 0));
-		imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+		imageView.setScaleType(ScaleType.CENTER_CROP);
 		imageView.setAdjustViewBounds(true);
 		addView(imageView, rParams);
 		coverImage = imageView;

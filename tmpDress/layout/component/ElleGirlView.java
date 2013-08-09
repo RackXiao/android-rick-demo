@@ -7,6 +7,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.view.Gravity;
 import android.widget.ImageView;
+import android.widget.ImageView.ScaleType;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -38,7 +39,7 @@ public class ElleGirlView extends RelativeLayout {
 		rParams = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
 		ImageView imageView = new ImageView(context);
 		imageView.setBackgroundColor(Color.argb(200, 0, 0, 0));
-		imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+		imageView.setScaleType(ScaleType.CENTER_CROP);
 		imageView.setId(1);
 		addView(imageView, rParams);
 		coverImage = imageView;
