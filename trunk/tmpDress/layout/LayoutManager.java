@@ -53,6 +53,7 @@ public class LayoutManager {
 
 	public static int WelcomeBase = ++BaseId;
 	public static int WelcomeFBButton = ++BaseId;
+	public static int WelcomeEmailButton = ++BaseId;
 	public static int WelcomeLawCheckBox = ++BaseId;
 	public static int WelcomeLawText = ++BaseId;
 	public static int WelcomeLawAcceptBtn = ++BaseId;
@@ -251,26 +252,39 @@ public class LayoutManager {
 		baseLayout.setId(WelcomeBase);
 		baseLayout.setBackgroundResource(R.drawable.img_welcomebg);
 
-		// Facebook 按鈕
+		// Facebook login 按鈕
 		rParams = new RelativeLayout.LayoutParams((int)(370 * LayoutManager.scale), (int)(80 * LayoutManager.scale));
-		rParams.setMargins((int)(58 * LayoutManager.scale), (int)(532 * LayoutManager.scale), 0, 0);
+		rParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+		rParams.setMargins((int)(58 * LayoutManager.scale), 0, 0, (int)(207 * LayoutManager.scale));
 		ImageView imageView = new ImageView(context);
 		imageView.setId(WelcomeFBButton);
-		imageView.setBackgroundResource(R.drawable.btn_fblogin);
+		imageView.setBackgroundResource(R.drawable.btn_loginfb);
+		baseLayout.addView(imageView, rParams);
+		
+		// E-mail login 按鈕
+		rParams = new RelativeLayout.LayoutParams((int)(370 * LayoutManager.scale), (int)(80 * LayoutManager.scale));
+		rParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+		rParams.setMargins((int)(58 * LayoutManager.scale), 0, 0, (int)(123 * LayoutManager.scale));
+		imageView = new ImageView(context);
+		imageView.setId(WelcomeEmailButton);
+		imageView.setBackgroundResource(R.drawable.btn_loginemail);
 		baseLayout.addView(imageView, rParams);
 		
 		// 隱私權政策和使用者條款
 		rParams = new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
-		rParams.setMargins(0, (int)(625 * LayoutManager.scale), 0, 0);
-		rParams.addRule(RelativeLayout.CENTER_HORIZONTAL);
+		rParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+		rParams.setMargins((int)(60 * LayoutManager.scale), 0, 0,(int)(67 * LayoutManager.scale));
+		//rParams.addRule(RelativeLayout.CENTER_HORIZONTAL);
 		LinearLayout law = new LinearLayout(context);
 		baseLayout.addView(law, rParams);
 		
+		//checkbox
 		lParams = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
 		CheckBox checkbox = new CheckBox(context);
 		checkbox.setId(WelcomeLawCheckBox);
 		law.addView(checkbox, lParams);
 		
+		//隱私權文字
 		lParams = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
 		TextView textView = new TextView(context);
 		textView.setId(WelcomeLawText);
@@ -281,7 +295,8 @@ public class LayoutManager {
 		
 		//小花與合作提案
 		rParams = new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
-		rParams.setMargins((int)(70 * LayoutManager.scale), (int)(680 * LayoutManager.scale), 0, 0);
+		rParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+		rParams.setMargins((int)(70 * LayoutManager.scale), 0, 0, (int)(37 * LayoutManager.scale));
 		LinearLayout cooperation = new LinearLayout(context);
 		cooperation.setId(WelcomeCooperation);
 		baseLayout.addView(cooperation, rParams);
