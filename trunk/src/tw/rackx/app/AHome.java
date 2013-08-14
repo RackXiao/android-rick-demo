@@ -3,6 +3,7 @@ package tw.rackx.app;
 import tw.rackx.app.calc.CalcActivity;
 import tw.rackx.extend.ExtendActivity;
 import tw.rackx.layout.LayoutMain;
+import tw.rackx.util.FileManager;
 import tw.rackx.util.UtilBase;
 import android.app.Activity;
 import android.content.Intent;
@@ -23,6 +24,8 @@ public class AHome extends ExtendActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		FileManager.singleton().writeFile("testFile","測試測試");
 		
 		// set the max number of concurrent network connections, default is 4
 		AjaxCallback.setNetworkLimit(8);
