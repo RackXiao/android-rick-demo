@@ -1,8 +1,8 @@
 package tw.rackx.app.calc;
 
 import tw.rackx.R;
-import tw.rackx.app.GV;
-import tw.rackx.extend.ExtendActivity;
+import tw.rackx.dao.GV;
+import tw.rackx.extend.BaseActivity;
 import tw.rackx.layout.LayoutCalc;
 import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
@@ -12,7 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class CalcCDPActivity extends ExtendActivity {
+public class CalcCDPActivity extends BaseActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

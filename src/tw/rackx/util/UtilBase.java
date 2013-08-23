@@ -13,7 +13,7 @@ import org.apache.http.params.HttpConnectionParams;
 import org.apache.http.params.HttpParams;
 import org.apache.http.util.EntityUtils;
 
-import tw.rackx.app.GV;
+import tw.rackx.dao.GV;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
