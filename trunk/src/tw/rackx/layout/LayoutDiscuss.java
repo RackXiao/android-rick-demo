@@ -1,6 +1,6 @@
 package tw.rackx.layout;
 
-import tw.rackx.app.GV;
+import tw.rackx.dao.GV;
 import tw.rackx.extend.LayoutBase;
 import android.content.Context;
 import android.view.View;

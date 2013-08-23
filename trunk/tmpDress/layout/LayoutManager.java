@@ -897,7 +897,7 @@ public class LayoutManager {
 		rParams.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
 		rParams.setMargins(0, (int)(3 * LayoutManager.scale), 0, 0);
 		textView = new TextView(context);
-		textView.setText("清單分享");
+		textView.setText("慾望清單");
 		textView.setGravity(Gravity.CENTER);
 		textView.setTextSize(22 * LayoutManager.fontScale);
 		textView.setTextColor(Color.rgb(153, 153, 153));

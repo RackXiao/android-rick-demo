@@ -1,6 +1,7 @@
-package tw.rackx.app;
+package tw.rackx.dao;
 
 import android.app.Application;
+import android.content.SharedPreferences;
 import android.graphics.Point;
 import android.graphics.PointF;
 import android.util.DisplayMetrics;
@@ -24,8 +25,8 @@ public class GV extends Application{
 	public static float fontScale;
 	
 	public static final String PACKAGE_NAME = "RICK_DEMO";
-//	private static final String SETTING_PREF = "setting_pref";
-//	public static SharedPreferences SP;
+	private static final String SETTING_PREF = "setting_pref";
+	public static SharedPreferences SP;
 
 //	// 設定資料庫
 //	public static SQLiteDatabase db = null;
@@ -38,7 +39,7 @@ public class GV extends Application{
 //		// 設定資料庫
 //		db = new DBHelper(this, getString(R.string.app_name)).getWritableDatabase();
 		
-//		SP = getSharedPreferences(SETTING_PREF, MODE_PRIVATE);
+		SP = getSharedPreferences(SETTING_PREF, MODE_PRIVATE);
 	}
 	
 	@Override

@@ -1,6 +1,6 @@
 package tw.rackx.extend;
 
-import tw.rackx.app.GV;
+import tw.rackx.dao.GV;
 import android.widget.RelativeLayout;
 
 public class LayoutBase {

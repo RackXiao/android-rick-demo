@@ -1,13 +1,13 @@
 package tw.rackx.app;
 
-import tw.rackx.extend.ExtendActivity;
+import tw.rackx.extend.BaseActivity;
 import tw.rackx.layout.LayoutDiscuss;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
-public class DiscussActivity extends ExtendActivity {
+public class DiscussActivity extends BaseActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

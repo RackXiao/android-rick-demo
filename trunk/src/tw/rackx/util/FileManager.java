@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
-import tw.rackx.app.GV;
+import tw.rackx.dao.GV;
 import android.os.Environment;
 
 public class FileManager {
